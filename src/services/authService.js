@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:9090/back1/auth";
+// Use relative path for proxy
+const API_URL = "/back1/auth";
 
 export const login = async (username, password) => {
   const response = await axios.post(`${API_URL}/login`, { username, password });
